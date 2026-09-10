@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+img2pdf
+pytesseract
+Pillow
+sentence-transformers
+numpy
+requests

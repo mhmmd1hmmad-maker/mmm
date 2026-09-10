@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp"
+    android:background="#F7F5F0">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="📚 أرشيف الذكي" android:textSize="24sp"
+        android:textStyle="bold" android:textColor="#3E2723" />
+
+    <EditText android:id="@+id/etTitle" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="عنوان المستند"
+        android:layout_marginTop="12dp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:layout_marginTop="8dp">
+
+        <Button android:id="@+id/btnCamera" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="📷 تصوير" android:backgroundTint="#6D4C41" />
+
+        <Button android:id="@+id/btnGallery" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="🖼️ المعرض" android:layout_marginStart="8dp"
+            android:backgroundTint="#8D6E63" />
+
+        <Button android:id="@+id/btnUpload" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="⬆️ حفظ PDF" android:layout_marginStart="8dp"
+            android:backgroundTint="#4E342E" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvStatus" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:textColor="#5D4037" />
+
+    <View android:layout_width="match_parent" android:layout_height="1dp"
+        android:background="#D7CCC8" android:layout_marginVertical="12dp" />
+
+    <EditText android:id="@+id/etQuestion" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="✍️ اكتب سؤالك هنا..."
+        android:minLines="2" android:gravity="top" />
+
+    <Button android:id="@+id/btnAsk" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="💡 أجب مع الاستشهاد"
+        android:backgroundTint="#3E2723" android:layout_marginTop="8dp" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:layout_marginTop="12dp">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="📝 الإجابة"
+                android:textStyle="bold" android:textSize="18sp"
+                android:textColor="#3E2723" />
+
+            <TextView android:id="@+id/tvAnswer" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="6dp"
+                android:textColor="#212121" android:textSize="16sp" />
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="📎 المصادر المستشهد بها"
+                android:textStyle="bold" android:textSize="18sp"
+                android:textColor="#3E2723" android:layout_marginTop="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSources" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginTop="6dp"
+                android:nestedScrollingEnabled="false" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

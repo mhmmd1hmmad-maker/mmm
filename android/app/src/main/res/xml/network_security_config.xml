@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- السماح بـ HTTP على الشبكة المحلية فقط (للاتصال بخادمك المنزلي) -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">192.168.190.150</domain>
+    </domain-config>
+</network-security-config>
